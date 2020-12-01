@@ -4,6 +4,7 @@
 
 import os
 import sys
+import itertools
 
 
 with open(os.path.join(sys.path[0], "input.txt"), "r") as file:
@@ -12,21 +13,16 @@ with open(os.path.join(sys.path[0], "input.txt"), "r") as file:
 final_sum = 2020
 
 def get_output_1(data):
-    for a in range(len(data)):
-        for b in range(len(data)):
-            if data[a] + data[b] == final_sum:
-                output = data[a] * data[b]
-                print(output)
-                return
+    for pair in itertools.combinations(data, 2):
+        if sum(pair) == final_sum:
+            print(pair[0] * pair[1])
+            return
 
 def get_output_2(data):
-    for a in range(len(data)):
-        for b in range(len(data)):
-            for c in range(len(data)):
-                if data[a] + data[b] + data[c] == final_sum:
-                    output = data[a] * data[b] * data[c]
-                    print(output)
-                    return
+    for pair in itertools.combinations(data, 3):
+        if sum(pair) == final_sum:
+            print(pair[0] * pair[1] * pair[2])
+            return
 
 
 get_output_1(lines)
