@@ -12,11 +12,13 @@ with open(os.path.join(sys.path[0], "input.txt"), "r") as file:
 
 final_sum = 2020
 
+
 def get_output_1(data):
     for pair in itertools.combinations(data, 2):
         if sum(pair) == final_sum:
             print(pair[0] * pair[1])
             return
+
 
 def get_output_2(data):
     for pair in itertools.combinations(data, 3):
