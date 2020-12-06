@@ -5,7 +5,6 @@
 import os
 import sys
 
-
 with open(os.path.join(sys.path[0], "input.txt"), "r") as file:
     lines = [line.rstrip("\n") for line in file]
 

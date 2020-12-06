@@ -6,7 +6,6 @@ import os
 import sys
 import itertools
 
-
 with open(os.path.join(sys.path[0], "input.txt"), "r") as file:
     lines = [int(line.rstrip("\n")) for line in file]
 
