@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# https://adventofcode.com/2020/day/5
+# https://adventofcode.com/2020/day/15
 
 import os
 import sys
